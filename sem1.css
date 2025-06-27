@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
+#navbar{
+    height: 10vmin;
+    width: 100%;
+    background-color: rgb(249, 249, 249);
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#heading{
+    font-size: 2rem;
+    font-weight: 1000;
+}
+
+#backimg{
+    width: 100%;
+    background-image: url(background2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ----Main Body------- */
+
+
+/* Top */
+#container1{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    height: 300px;
+    width: 100%;
+
+    animation-duration: 3s;
+    animation-name: rotate;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-direction: normal;
+}
+
+#useless{
+    height: 30px;
+}
+
+
+#useless2{
+    height: 20px;
+    border-bottom: white solid 1px;
+}
+
+#hd1{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+#semester-subjects{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    height: 220px;
+    width: 250px;
+    padding-left: 1rem;
+    text-align: left;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+    border-radius: 10%;
+    border: 1px solid black;
+}
+
+
+/* Main content */
+
+#sub-boxes{
+    height: 1200px;
+    width: 100%;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main{
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-weight: 600;
+    height: 155px;
+    width: 300px;
+    background-color: rgb(255, 250, 243);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    animation: slideIn2 3s ease-out;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+  background: linear-gradient(to right, #c3b2b6, #000000); /* You can change this */
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: slideIn1 3s ease-out;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+@media (max-width: 450px){
+    #heading{
+        font-size: 1.1rem;
+    }
+    #bee{
+        font-size: 0.95rem;
+    }
+    #end{
+        font-size: 0.6rem;
+    }
+    #container1{
+        height: 380px;
+    }
+    #useless{
+        height: 25px;
+    }
+    #container1{
+        height: 280px;
+    }
+    #container3{
+        height: 60px;
+    }
+}
+
+@keyframes rotate {
+    0% { 
+        transform: rotate(0deg) scale(1); 
+    }
+    50% {
+        transform: rotate(360deg) scale(1.1); 
+    }
+    100% {
+        transform:scale(1); 
+    }
+}
+
+@keyframes slideIn1 {
+    0% {
+        transform: translateX(100%); 
+    }
+    33%{
+        transform: translateY(-30%);
+    }
+    66%{
+        transform: translateY(14%);
+    }
+    100% {
+        transform: translateX(0); 
+    }
+}
+
+@keyframes slideIn2{
+    0% {
+        transform: translateX(-100%);
+    }
+    33%{
+        transform: translateY(-15%);
+    }
+    66%{
+        transform: translateY(15%);
+    }
+    100% {
+        transform: translateX(0); 
+    }
+}
