@@ -31,3 +31,11 @@ nextDom.addEventListener('click', function () {
 prevDom.addEventListener('click', function () {
     showSlider('prev');
 });
+
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'ArrowRight') {
+        showSlider('next');
+    } else if (event.key === 'ArrowLeft') {
+        showSlider('prev');
+    }
+});
