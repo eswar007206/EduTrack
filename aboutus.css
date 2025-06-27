@@ -93,21 +93,29 @@ header a{
 }
 
 /* thumbail */
-.thumbnail{
+.thumbnail-wrapper {
     position: absolute;
-    bottom: 50px;
-    left: 50%;
-    width: max-content;
+    top: 70%;
+    right: 20px;
+    transform: translateY(-50%);
+    height: 965px; /* adjust as needed */
+    overflow: hidden;
     z-index: 100;
+}
+
+.thumbnail{
     display: flex;
+    flex-direction: column;
     gap: 20px;
+    transition: transform 0.5s ease-in-out;
 }
 .thumbnail .item{
-    width: 150px;
-    height: 220px;
+    width: 140px;
+    height: 155px;
     flex-shrink: 0;
     position: relative;
 }
+
 .thumbnail .item img{
     width: 100%;
     height: 100%;
@@ -143,7 +151,7 @@ header a{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #eee4;
+    background-color: rgba(255, 255, 255, 0.874);
     border: none;
     color: #000000;
     font-family: monospace;
@@ -152,8 +160,8 @@ header a{
     transition: .5s;
 }
 .arrows button:hover{
-    background-color: #fff;
-    color: #000;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 /* animation */
@@ -318,7 +326,7 @@ header a{
     font-size: 0.8rem;
     font-weight: 600;
 }
-
+/* 
 .thumbnail{
     display: none;
-}
+} */
